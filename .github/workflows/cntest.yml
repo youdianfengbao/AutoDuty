@@ -8,6 +8,7 @@ on:
 
 permissions:
   actions: write
+  contents: write
 
 jobs:
   Build:
@@ -23,20 +24,33 @@ jobs:
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 9.0.x
+          dotnet-version: 10.0.x
 
       - name: Download Dalamud Latest
         run: |
-          wget https://ottercorp.github.io/dalamud-distrib/latest.7z -O ${{ env.DALAMUD_HOME }}.7z
-          sudo apt-get install p7zip 
-          7z x ${{ env.DALAMUD_HOME }}.7z -o${{ env.DALAMUD_HOME }}
+          wget https://goatcorp.github.io/dalamud-distrib/latest.zip -O ${{ env.DALAMUD_HOME }}.zip
+          unzip ${{ env.DALAMUD_HOME }}.zip -d ${{ env.DALAMUD_HOME }}
 
       - name: Restore Project
         run: dotnet restore
 
       - name: Build Project
-        run: dotnet build --configuration Release AutoDuty/AutoDuty.csproj -p:AssemblyVersion=${{ github.ref_name }}
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          VERSION="${TAG_NAME#v}"
+          echo "AssemblyVersion: $VERSION"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          dotnet build --configuration Release AutoDuty/AutoDuty.csproj -p:AssemblyVersion="$VERSION"
 
       - name: Print Release Body
         run: |
-          echo "${{ github.event.release.body }} AssemblyVersion=${{ github.ref_name }}"
+          echo "${{ github.event.release.body }} AssemblyVersion=${{ env.VERSION }}"
+
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: AutoDuty 汉化版 ${{ env.VERSION }}
+          body: "AutoDuty 国服汉化版 ${{ env.VERSION }}（基于上游 ${{ env.VERSION }}，tag ${{ github.ref_name }}）"
+          files: AutoDuty/bin/Release/AutoDuty/latest.zip
