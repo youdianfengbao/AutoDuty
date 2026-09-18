@@ -1,5 +1,6 @@
 {
   "LoopActions": {
+    "Hint": "按住 Ctrl 键可删除条目",
     "AutoEquip": {
       "GearSourceHelp": "原版 - 仅使用兵装库(Armory Chest)装备\n装备管理器 - 调用 Gearsetter，可将淘汰装备移至背包\n造型师 - 使用 Stylist 插件设置",
       "MoveOldToInventory": "将旧物品移至背包",
@@ -22,6 +23,12 @@
       "WaitingUpTo": "最多等待...",
       "Seconds": "秒"
     },
+    "PlaylistPreLoop": {
+      "Help": "在任务列表 (Playlist) 模式下，将装备更换为第一个条目指定的套装"
+    },
+    "PlaylistSwitchLoop": {
+      "Help": "在任务列表 (Playlist) 模式下，将装备更换为下一个条目指定的套装，并将当前循环切换至下一个列表条目（如适用）"
+    },
     "TripleTriadSell": {
       "SlotsOccupied": "占用格数",
       "CardCount": "卡片数量"
@@ -34,6 +41,12 @@
       "InventorySlotsLeft": "剩余背包格数 @",
       "UseGCAetheryteTicket": "使用大国防联军传送券"
     },
+    "Armoire": {
+      "Help": "将在循环之间把物品存入收藏柜"
+    },
+    "Glamour": {
+      "Help": "将在循环之间把物品存入投影台"
+    },
     "Desynth": {
       "OnlySkillUps": "仅提升分解熟练度时分解",
       "ItemLevelLimit": "物品等级限制",
@@ -43,6 +56,7 @@
       "Categories": "分解类别"
     },
     "Coffers": {
+      "Help": "AutoDuty 将在每次循环之间打开装备宝箱（如骑士的武器箱）",
       "OpenCoffersWithGearset": "使用套装开启宝箱：",
       "CurrentGearset": "当前套装",
       "UseBlacklist": "使用黑名单",
@@ -53,6 +67,7 @@
       "AddCoffer": "添加宝箱"
     },
     "Retire": {
+      "LifestreamNotRegistered": ""
     },
     "ConsumeItems": {
       "AutoConsumeHelp": "AutoDuty 将在运行时和每次循环间使用这些物品（如果状态不存在）",
@@ -69,6 +84,7 @@
     },
     "Wait": {
       "WaitTime": "（秒）循环间等待时间",
+      "WaitOnPlugins": "等待指定插件完成其操作",
       "WaitTimeHelp": "将所有 AutoDuty 循环间处理延迟 X 秒。"
     }
   }

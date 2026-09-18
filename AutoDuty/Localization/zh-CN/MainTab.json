@@ -40,6 +40,9 @@
     "Busy": "工作中...",
     "RequiresVNavmeshAlt": "AutoDuty 依赖 vnavmesh 插件进行移动和导航。\n请添加仓库：https://puni.sh/api/repository/veyn",
     "RequiresBossModAlt": "AutoDuty 依赖 BossMod 插���处理战斗机制。\n请添加仓库：https://puni.sh/api/repository/veyn",
+    "DungeonsRemaining": "剩余副本次数：{0}",
+    "DungeonsRemainingExplanation": "估算在达到每日 100 次副本上限之前，还可以再运行多少次副本。",
+    "CurrentVariantPath": "当前异闻副本路径",
     "Modes": {
       "Looping": "单副本挂机 (Looping)",
       "Playlist": "任务列表模式 (Playlist)",
@@ -54,13 +57,60 @@
       "Trial": "讨伐/歼灭战",
       "Raid": "大型任务 (Raid)",
       "Variant": "异闻/多变副本",
-      "NoviceHall": "初学者学堂"
+      "NoviceHall": "初学者学堂",
+      "Crucible": "斗兽弈棋 (Crucible)"
+    },
+    "Crucible": {
+      "Team": "斗兽弈棋队伍",
+      "Familiars": "魔宠 {0}/{1}",
+      "Familiar": "魔宠",
+      "Rank": "等级",
+      "CustomFull": "队伍已满（最多 {0} 名）\n请先取消一个勾选再更换",
+      "ClearRanks": "清除已保存的等级",
+      "ClearRanksHelp": "清除已保存的等级记录\n按住 Ctrl 并点击",
+      "NoFamiliars": "尚未读取到任何魔宠。请在 Lauda 处打开队伍或图鉴界面，以便 AutoDuty 读取。",
+      "Menus": "棋盘菜单",
+      "TableLegend": "底色标记：该模式将出战的队伍 · 悬停名字查看属性",
+      "TableLegendCustom": "勾选：你选择出战的队伍 · 悬停名字查看属性",
+      "NotSeen": "尚未读取到等级\n下次组建队伍时将从图鉴读取",
+      "Modes": {
+        "Recommended": "推荐",
+        "Leveling": "练级",
+        "Custom": "自定义"
+      },
+      "ModesHelp": {
+        "Recommended": "选择等级最高的魔宠\n同级时选择属性更好的",
+        "Leveling": "选择等级最低的魔宠，优先经验最少的\n按同样顺序决定每场战斗的出战者",
+        "Custom": "使用你在下方勾选的魔宠\n最多 10 只"
+      },
+      "Toggles": {
+        "FightPicks": "挑选出战",
+        "Loot": "战利品与结算",
+        "Treasure": "宝物",
+        "Shop": "商店",
+        "Rest": "在营地休息",
+        "Items": "治疗物品",
+        "MenusWithoutRun": "无需 AutoDuty 运行也执行菜单（测试用）"
+      },
+      "TogglesHelp": {
+        "FightPicks": "为每场战斗挑选最多 3 只魔宠并开战\n被击倒的魔宠将被跳过",
+        "Loot": "战斗结束后拾取所有战利品\n在结算界面点击继续",
+        "Treasure": "领取一件宝物：优先治疗，其次防御，最后输出",
+        "Shop": "先购买治疗物品，再购买野兽装备，最后购买一份饲料\n买完后离开商店",
+        "Rest": "让 HP 低于 60% 的魔宠（最多 2 只）在营地休息\n若没有魔宠可休息，则改为获得 90% 自我治疗",
+        "Items": "在 HP 较低时使用治疗物品\n战斗中：低于 40% · 棋盘上：低于 60%",
+        "MenusWithoutRun": "用于无路径的测试\n与 Lauda 对话即可组建队伍、挑战棋盘并开始\n在棋盘上时，上述菜单会自动执行，移动则由你自己完成"
+      }
     },
     "LevelingModes": {
       "None": "不开启",
       "Support": "自动排队",
       "Trust_Group": "亲信升级",
       "Trust_Solo": "仅自己"
+    },
+    "Playlist": {
+      "DeleteHelp": "删除已保存的任务列表\n按住 Ctrl 键启用",
+      "SaveHelp": "以输入的名称保存当前任务列表\n按住 Ctrl 键启用"
     }
   }
 }
